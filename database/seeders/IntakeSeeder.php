@@ -17,7 +17,7 @@ class IntakeSeeder extends Seeder
     public function run(): void
     {
         Intake::factory()
-            ->count(5)
+            ->count(10)
             ->sequence(fn ($sequence) => [
                 'name' => 'Intake ' . $sequence->index +1
             ])
