@@ -15,4 +15,14 @@ class Student extends Model
       'name',
       'email',
     ];
+
+    public function intake()
+    {
+        return $this->belongsTo(Intake::class, 'intake_id');
+    }
+
+    public function licenseCategory()
+    {
+        return $this->belongsTo(LicenseCategory::class, 'license_category_id');
+    }
 }

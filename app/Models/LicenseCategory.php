@@ -18,4 +18,9 @@ class LicenseCategory extends Model
     {
         return $this->belongsTo(Intake::class);
     }
+
+    public function students()
+    {
+        return $this->hasMany(Student::class, 'license_category_id');
+    }
 }
